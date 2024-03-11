@@ -1,4 +1,5 @@
 import { TextGenerateEffect } from "@/components/text-generate-effect";
+import { Button } from "@/components/ui/moving-border";
 import Link from "next/link";
 
 const HeroSection = () => {
@@ -18,8 +19,8 @@ const HeroSection = () => {
           that users love"
         />
 
-        <Link href={"mailto:bistshubham2016@gmail.com"} className="group">
-          <h1 className="text-3xl font-bol group-hover:text-green-400 transition-all">
+        <Link href={"mailto:bistshubham2016@gmail.com"} className="group mt-10">
+          <h1 className="text-3xl font-bol group-hover:text-green-400 transition-all animate-bounce">
             Contact Me 📬
           </h1>
 
@@ -27,7 +28,15 @@ const HeroSection = () => {
           <div className=" w-full bg-indigo-500 h-2 translate-x-2"></div>
         </Link>
       </div>
-
+      {/* available for hire */}
+      <div className="mr-28">
+        <Button
+          borderRadius="1.75rem"
+          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 "
+        >
+          Available for Work
+        </Button>
+      </div>
       {/* square and circle */}
       <div>
         <div className="w-72 h-72 space-y-3 -rotate-[30deg]">
@@ -39,6 +48,8 @@ const HeroSection = () => {
             <div className="w-32 h-32 rounded-2xl bg-indigo-500"></div>
             <div className="w-32 h-32 rounded-full bg-green-500"></div>
           </div>
+
+          <div className="glow animate-pulse absolute top-[40%] right-1/2 -z-10"></div>
         </div>
       </div>
     </div>

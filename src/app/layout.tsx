@@ -17,10 +17,16 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" suppressHydrationWarning>
-      <body className={spaceGrotesk.className}>
+      <body
+        className={
+          spaceGrotesk.className +
+          "min-h-screen  dark:bg-grid-white/[0.05] bg-grid-black/[0.05]"
+        }
+      >
         <ThemeProvider
           attribute="class"
           defaultTheme="dark"
+          // forcedTheme="dark"
           enableSystem
           disableTransitionOnChange
         >
