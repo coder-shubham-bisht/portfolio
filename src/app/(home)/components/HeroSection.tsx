@@ -1,3 +1,4 @@
+import { Meteors } from "@/components/meteors";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { Button } from "@/components/ui/moving-border";
 import Link from "next/link";
@@ -15,11 +16,14 @@ const HeroSection = () => {
         </h1>
         <TextGenerateEffect
           className="md:w-96 text-blue-300 font-medium"
-          words=" I'm a Web Developer,with passion for building modern web application
-          that users love"
+          words=" I'm a Web Developer with passion for building modern web application
+          that users love ❤️"
         />
 
-        <Link href={"mailto:bistshubham2016@gmail.com"} className="group mt-10">
+        <Link
+          href={"mailto:bistshubham2016@gmail.com"}
+          className="group mt-10 "
+        >
           <h1 className="text-3xl font-bol group-hover:text-green-400 transition-all animate-bounce">
             Contact Me 📬
           </h1>
@@ -35,18 +39,19 @@ const HeroSection = () => {
           className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 "
         >
           Available for Work
+          <Meteors number={50} />
         </Button>
       </div>
       {/* square and circle */}
-      <div>
+      <div className="animate-spin-slow">
         <div className="w-72 h-72 space-y-3 -rotate-[30deg]">
           <div className="flex gap-3 translate-x-8">
-            <div className="w-32 h-32 rounded-2xl bg-green-500"></div>
-            <div className="w-32 h-32 rounded-full bg-indigo-500"></div>
+            <div className="w-32 h-32 rounded-2xl bg-green-500 animate-spin-slow"></div>
+            <div className="w-32 h-32 rounded-full bg-indigo-500 animate-bounce"></div>
           </div>
           <div className="flex gap-3 -translate-x-8">
-            <div className="w-32 h-32 rounded-2xl bg-indigo-500"></div>
-            <div className="w-32 h-32 rounded-full bg-green-500"></div>
+            <div className="w-32 h-32 rounded-2xl bg-indigo-500 animate-spin-slow"></div>
+            <div className="w-32 h-32 rounded-full bg-green-500 animate-bounce"></div>
           </div>
 
           <div className="glow animate-pulse absolute top-[40%] right-1/2 -z-10"></div>
