@@ -1,7 +1,5 @@
 import SectionTitle from "@/components/SectionTitle";
 import { HoverEffect } from "@/components/card-hover-effect";
-import { Meteors } from "@/components/meteors";
-import { Button } from "@/components/ui/moving-border";
 import {
   SiCss3,
   SiHtml5,
