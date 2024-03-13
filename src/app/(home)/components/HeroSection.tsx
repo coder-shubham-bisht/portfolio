@@ -10,7 +10,7 @@ const HeroSection = () => {
       {/* person info */}
       <div className="flex flex-col gap-4 text-center lg:text-left">
         <h1 className="text-4xl lg:7xl font-bold">
-          Nice to meet you! 👋 <br />{" "}
+          Nice to meet you! 👋 <br />
           <span className="underline underline-offset-8 decoration-green-500">
             I'm Shubham
           </span>

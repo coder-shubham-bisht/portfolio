@@ -2,7 +2,6 @@
 import { cn } from "@/lib/utils";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { Meteors } from "./meteors";
 
 export const HoverEffect = ({
   items,
