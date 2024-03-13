@@ -54,7 +54,7 @@ const Project = () => {
                 <div className="flex gap-6 flex-wrap">
                   {project.tech.map((icon, idx) => {
                     const Icon = icon;
-                    return <p>{Icon}</p>;
+                    return <p key={idx}>{Icon}</p>;
                   })}
                 </div>
               </DirectionAwareHover>
