@@ -1,3 +1,4 @@
+// \* eslint-disable react/jsx-key \*
 import Navbar from "./components/Navbar";
 import HeroSection from "./components/HeroSection";
 import Skills from "./components/Skills";
