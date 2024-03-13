@@ -18,7 +18,7 @@ const Navbar = () => {
   return (
     <header className="sticky top-1 z-50 flex justify-between items-center backdrop-blur-sm container  max-w-[1000px] mx-auto">
       <h1 className="text-2xl font-bold underline underline-offset-8 decoration-green-500 -rotate-2 animate-pulse">
-        Shubham Bisht 👨🏻‍💻{" "}
+        Shubham Bisht 👨🏻‍💻
       </h1>
       <ThemeToggle />
       <nav className="flex justify-between items-center">
