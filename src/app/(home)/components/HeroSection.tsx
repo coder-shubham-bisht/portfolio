@@ -12,7 +12,7 @@ const HeroSection = () => {
         <h1 className="text-4xl lg:7xl font-bold">
           Nice to meet you! 👋 <br />
           <span className="underline underline-offset-8 decoration-green-500">
-            I'm Shubham
+            {"I'm Shubham"}
           </span>
         </h1>
         <TextGenerateEffect
