@@ -15,7 +15,7 @@ const projects = [
   {
     title: "Weather App",
     tech: [
-      <SiNextdotjs className="text-5xl " />,
+      <SiNextdotjs className="text-5xl" />,
       <SiTailwindcss className="text-5xl text-[#18B2B6]" />,
       <SiReact className="text-5xl text-[#61DAFB]" />,
       <SiTypescript className="text-5xl text-[#2F74C0]" />,
@@ -45,13 +45,13 @@ const Project = () => {
       <div className="flex gap-10 flex-wrap items-center justify-center">
         {projects.map((project, idx) => {
           return (
-            <Link href={project.link} key={idx} target="_blank">
+            <Link href={project.link} key={project.title} target="_blank">
               <h3 className="text-center text-2xl mb-2 font-bold">
                 {project.title}
               </h3>
               <DirectionAwareHover imageUrl={"/" + project.cover}>
                 <h3 className="font-bold text-4xl mb-6"> {project.title}</h3>
-                <div className="flex gap-6 flex-wrap">
+                <div className="flex gap-5">
                   {project.tech.map((icon, idx) => {
                     return <p key={idx}>{icon}</p>;
                   })}
