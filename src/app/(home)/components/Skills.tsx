@@ -1,4 +1,7 @@
+import SectionTitle from "@/components/SectionTitle";
 import { HoverEffect } from "@/components/card-hover-effect";
+import { Meteors } from "@/components/meteors";
+import { Button } from "@/components/ui/moving-border";
 import {
   SiCss3,
   SiHtml5,
@@ -42,12 +45,8 @@ const skills = [
 const Skills = () => {
   return (
     <div>
-      <div className="group">
-        <h1 className="text-2xl text-center font-bol group-hover:text-green-400 transition-all -rotate-2">
-          Skills
-          <div className=" w-[80px] mx-auto bg-green-500 h-2  "></div>
-          <div className=" w-[80px] mx-auto bg-indigo-500 h-2 translate-x-2"></div>
-        </h1>
+      <div className="flex items-center justify-center">
+        <SectionTitle title="Skills" />
       </div>
       {/* all skills */}
       <div className="max-w-5xl mx-auto px-8">

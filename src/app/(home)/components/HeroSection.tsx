@@ -1,3 +1,4 @@
+import SectionTitle from "@/components/SectionTitle";
 import { Meteors } from "@/components/meteors";
 import { TextGenerateEffect } from "@/components/text-generate-effect";
 import { Button } from "@/components/ui/moving-border";
@@ -34,29 +35,25 @@ const HeroSection = () => {
       </div>
       {/* available for hire */}
       <div className="mr-28">
-        <Button
-          borderRadius="1.75rem"
-          className="bg-white dark:bg-slate-900 text-black dark:text-white border-neutral-200 dark:border-slate-800 "
-        >
-          Available for Work
-          <Meteors number={50} />
-        </Button>
+        <SectionTitle title="Available for Work" />
       </div>
+
       {/* square and circle */}
-      <div className="animate-spin-slow">
+      <div className="hidden sm:block">
         <div className="w-72 h-72 space-y-3 -rotate-[30deg]">
           <div className="flex gap-3 translate-x-8">
-            <div className="w-32 h-32 rounded-2xl bg-green-500 animate-spin-slow"></div>
-            <div className="w-32 h-32 rounded-full bg-indigo-500 animate-bounce"></div>
+            <div className="w-32 h-32 rounded-2xl bg-green-500 "></div>
+            <div className="w-32 h-32 rounded-full bg-indigo-500 "></div>
           </div>
           <div className="flex gap-3 -translate-x-8">
-            <div className="w-32 h-32 rounded-2xl bg-indigo-500 animate-spin-slow"></div>
-            <div className="w-32 h-32 rounded-full bg-green-500 animate-bounce"></div>
+            <div className="w-32 h-32 rounded-2xl bg-indigo-500 "></div>
+            <div className="w-32 h-32 rounded-full bg-green-500"></div>
           </div>
 
           <div className="glow animate-pulse absolute top-[40%] right-1/2 -z-10"></div>
         </div>
       </div>
+      <div className="glow animate-pulse absolute top-[40%] right-1/2 -z-10"></div>
     </div>
   );
 };
