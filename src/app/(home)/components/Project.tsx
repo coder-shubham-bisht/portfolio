@@ -20,8 +20,8 @@ const projects = [
       <SiReact className="md:text-5xl text-xl text-[#61DAFB]" />,
       <SiTypescript className="md:text-5xl text-xl text-[#2F74C0]" />,
     ],
-    link: "https://legendary-lamington-40fe4a.netlify.app",
     cover: "weatherApp.png",
+    link: "https://weather-app-blond-chi-94.vercel.app/",
   },
   {
     title: "Country App",
@@ -30,7 +30,8 @@ const projects = [
       <SiHtml5 className="md:text-5xl text-xl text-[#DD4B25]" />,
       <SiCss3 className="md:text-5xl text-xl text-[#254BDD]" />,
     ],
-    link: "https://weather-app-blond-chi-94.vercel.app/",
+    link: "https://legendary-lamington-40fe4a.netlify.app",
+
     cover: "CountryApp.png",
   },
 ];
