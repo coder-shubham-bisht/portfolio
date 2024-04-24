@@ -9,12 +9,21 @@ import { Tabs } from "@/components/ui/tabs";
 import { contacts } from "@/utils/contactData";
 import { items } from "@/utils/gridData";
 import { tabs } from "@/utils/tabsData";
+import Link from "next/link";
+import { FaGithub } from "react-icons/fa";
 
 export default function Home() {
   return (
     <main className="">
       {/* source code */}
-      <div></div>
+      <div className="fixed top-0 right-0 h-4 z-50">
+        <Link
+          href="https://github.com/coder-shubham-bisht/portfolio"
+          className="flex items-center justify-between gap-2 p-2 bg-slate-400 rounded-full text-black"
+        >
+          <span>Source code</span> <FaGithub />
+        </Link>
+      </div>
       {/* spotlight section */}
 
       <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
