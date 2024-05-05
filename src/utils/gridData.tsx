@@ -1,15 +1,8 @@
 import weatherAppImage from "@/images/Weatherapp.jpg";
 import countryAppImage from "@/images/CountryApp.png";
+import RemindMeAppImage from "@/images/RemindMeApp.png";
+import infinteScollAppImage from "@/images/infinteScrollApp.png";
 
-import {
-  IconArrowWaveRightUp,
-  IconBoxAlignRightFilled,
-  IconBoxAlignTopLeft,
-  IconClipboardCopy,
-  IconFileBroken,
-  IconSignature,
-  IconTableColumn,
-} from "@tabler/icons-react";
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
 const Skeleton = () => (
@@ -27,12 +20,10 @@ function ItemImage({
     <Link
       target="_blank"
       href={href ?? ""}
-      className="flex flex-1 w-full h-full min-h-[6rem] rounded-xl overflow-hidden  "
+      className="  rounded-xl group  relative w-full h-40 overflow-hidden"
     >
       <Image
-        className="h-full w-full object-cover"
-        width={500}
-        height={500}
+        className=" object-cover  w-full h-full group-hover:scale-110 transition-all duration-500 absolute"
         src={src ?? ""}
         alt="project-img"
       />
@@ -62,10 +53,28 @@ const items = [
       />
     ),
   },
+
   {
-    title: "Countries Api",
-    description: "",
-    header: <Skeleton />,
+    title: "RemindMe App",
+    description:
+      "This website is built with  Nextjs, Tailwindcss, Shadcn, Drizzle , Neon Db, Clerk Auth ",
+    header: (
+      <ItemImage
+        src={RemindMeAppImage}
+        href="https://remind-me-app-lemon.vercel.app/"
+      />
+    ),
+  },
+  {
+    title: "Infinte scroll with Server actions",
+    description:
+      "This website is built with  Nextjs with Server actions to load api data on user scoll",
+    header: (
+      <ItemImage
+        src={infinteScollAppImage}
+        href="https://infinitescroll-with-api-data-fetching.vercel.app/"
+      />
+    ),
   },
 ];
 

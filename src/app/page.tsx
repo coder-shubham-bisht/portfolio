@@ -1,84 +1,99 @@
 "use client";
 
-import { BentoGrid, BentoGridItem } from "@/components/ui/BentoGrid";
-import { Spotlight } from "@/components/ui/Spotlight";
-import { BackgroundBeams } from "@/components/ui/background-beams";
-import { HoverEffect } from "@/components/ui/card-hover-effect";
-import { SparklesCore } from "@/components/ui/sparkles";
-import { Tabs } from "@/components/ui/tabs";
+import { BentoGrid, BentoGridItem } from "@/components/BentoGrid";
+import { Spotlight } from "@/components/Spotlight";
+import { BackgroundBeams } from "@/components/background-beams";
+import { buttonVariants } from "@/components/ui/button";
+import { HoverEffect } from "@/components/card-hover-effect";
+import { SparklesCore } from "@/components/sparkles";
+import { Tabs } from "@/components/tabs";
+import { cn } from "@/utils/cn";
 import { contacts } from "@/utils/contactData";
 import { items } from "@/utils/gridData";
 import { tabs } from "@/utils/tabsData";
 import Link from "next/link";
 import { FaGithub } from "react-icons/fa";
+import { ContainerScroll } from "@/components/container-scroll-animation";
+import { Separator } from "@/components/ui/separator";
+import { TextGenerateEffect } from "@/components/text-generate-effect";
 
 export default function Home() {
   return (
-    <main className="">
+    <main>
       {/* source code */}
-      <div className="fixed top-0 right-0 h-4 z-50">
-        <Link
-          href="https://github.com/coder-shubham-bisht/portfolio"
-          className="flex items-center justify-between gap-2 p-2 bg-slate-400 rounded-full text-black"
-        >
-          <span>Source code</span> <FaGithub />
-        </Link>
-      </div>
+      <Link
+        href="https://github.com/coder-shubham-bisht/portfolio"
+        className={cn(
+          buttonVariants({
+            className: "fixed top-4 right-4  z-50 flex space-x-1 ",
+            variant: "default",
+          })
+        )}
+      >
+        <span>Code</span> <FaGithub size={24} />
+      </Link>
+
       {/* spotlight section */}
 
-      <div className="h-[40rem] w-full rounded-md flex md:items-center md:justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+      <div className="h-screen  w-full rounded-md flex items-center justify-center bg-black/[0.96] antialiased bg-grid-white/[0.02] relative overflow-hidden">
+        {/* name and skills description */}
+        <div className="p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
+          <h1 className="text-4xl md:text-7xl font-bold text-center bg-gradient-to-r from-orange-700 via-blue-500 to-green-400  bg-clip-text text-transparent animate-gradient bg-300%">
+            Shubham Bisht
+            <br />
+            FullStack Developer
+          </h1>
+
+          <TextGenerateEffect
+            className="text-center"
+            words=" Skilled in Tailwind, ReactJS, NextJS, TypeScript, Prisma, drizzle focused on responsive, dynamic web development with efficient code"
+          />
+        </div>
+
+        {/* sparkle background */}
         <div className="w-full absolute inset-0 h-full">
           <SparklesCore
             id="tsparticlesfullpage"
             background="transparent"
             minSize={0.6}
-            maxSize={1.4}
+            maxSize={2}
             particleDensity={100}
             className="w-full h-full"
             particleColor="#FFFFFF"
           />
         </div>
+
         <Spotlight
-          className="-top-40 left-0 md:left-60 md:-top-20"
+          className="top-20 left-10 md:left-60 md:-top-40"
           fill="white"
         />
-        <div className=" p-4 max-w-7xl  mx-auto relative z-10  w-full pt-20 md:pt-0">
-          <h1 className="text-4xl md:text-7xl font-bold text-center bg-clip-text text-transparent bg-gradient-to-b from-neutral-50 to-neutral-400 bg-opacity-50">
-            Shubham Bisht
-            <br /> FullStack Developer
-          </h1>
-          <p className="mt-4 font-normal text-base text-neutral-300 max-w-lg text-center mx-auto">
-            Skilled in Tailwind, ReactJS, NextJS, TypeScript,Prisma,drizzle
-            focused on responsive, dynamic web development with efficient code
-          </p>
-        </div>
       </div>
 
       {/* project tabs */}
-      <div className="h-[20rem] md:h-[40rem] [perspective:1000px] relative b flex flex-col max-w-5xl mx-auto w-full  items-start justify-start mb-40 ">
-        <h2 className="text-center w-full sm:text-6xl text-3xl mb-10">
-          Projects
-        </h2>
-        <Tabs tabs={tabs} />
-      </div>
+      <h2 className=" text-center text-4xl md:text-[6rem] font-bold mt-1 leading-none tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 to-neutral-600 animate-gradient bg-300%">
+        Projects
+      </h2>
+      <ContainerScroll titleComponent={""}>
+        <Tabs tabs={tabs} contentClassName="mt-2 p-0" />
+      </ContainerScroll>
 
       {/* projects grid */}
-      <BentoGrid className="max-w-4xl mx-auto">
+      <BentoGrid className=" container mb-6  grid-cols-1 sm:grid-cols-2 md:grid-cols-3">
         {items.map((item, i) => (
           <BentoGridItem
             key={i}
             title={item.title}
             description={item.description}
             header={item.header}
-            className={i === 3 || i === 6 ? "md:col-span-2" : ""}
           />
         ))}
       </BentoGrid>
 
+      <Separator />
       {/* contact me section */}
-      <div className=" w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased mt-2 ">
+      <div className=" w-full rounded-md bg-neutral-950 relative flex flex-col items-center justify-center antialiased  ">
         <div className="max-w-2xl mx-auto p-4">
-          <h1 className="relative z-10 text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-b from-neutral-200 to-neutral-600  text-center font-sans font-bold">
+          <h1 className=" text-lg md:text-7xl  bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 to-neutral-600  text-center font-sans font-bold animate-gradient bg-300%">
             Contact Me
           </h1>
 

@@ -1,5 +1,7 @@
 import weatherAppImage from "@/images/Weatherapp.jpg";
 import countryAppImage from "@/images/CountryApp.png";
+import RemindMeAppImage from "@/images/RemindMeApp.png";
+import infinteScollAppImage from "@/images/infinteScrollApp.png";
 
 import Image, { StaticImageData } from "next/image";
 import Link from "next/link";
@@ -12,14 +14,12 @@ function ImageContainer({
   href: string;
 }) {
   return (
-    <Link href={href ?? ""} target="_blank">
-      <Image
-        src={src}
-        alt="dummy image"
-        width={1000}
-        height={1000}
-        className="object-cover object-left-top h-[80%]  md:h-[90%] absolute -bottom-10 inset-x-0 w-[90%] rounded-xl mx-auto "
-      />
+    <Link
+      href={href ?? ""}
+      target="_blank"
+      className="group  w-full  overflow-hidden h-full"
+    >
+      <Image src={src} alt="dummy image" className="object-contain " />
     </Link>
   );
 }
@@ -50,16 +50,32 @@ const tabs = [
       </div>
     ),
   },
-  // {
-  //   title: "Instagram Clone",
-  //   value: "instagram-clone",
-  //   content: (
-  //     <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
-  //       <p>Instagram Clone</p>
-  //       <ImageContainer src={} />
-  //     </div>
-  //   ),
-  // },
+  {
+    title: "RemindMeApp",
+    value: "CountRemindMeAppriesapi",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>RemindMe</p>
+        <ImageContainer
+          src={RemindMeAppImage}
+          href="https://remind-me-app-lemon.vercel.app/"
+        />
+      </div>
+    ),
+  },
+  {
+    title: "Infinete Scoll app",
+    value: "Infinete Scoll app",
+    content: (
+      <div className="w-full overflow-hidden relative h-full rounded-2xl p-10 text-xl md:text-4xl font-bold text-white bg-gradient-to-br from-purple-700 to-violet-900">
+        <p>RemindMe</p>
+        <ImageContainer
+          src={infinteScollAppImage}
+          href="https://infinitescroll-with-api-data-fetching.vercel.app/"
+        />
+      </div>
+    ),
+  },
 ];
 
 export { tabs };
