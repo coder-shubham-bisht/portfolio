@@ -81,12 +81,12 @@ export default function Home() {
 
       <ContainerScroll
         titleComponent={
-          <h2 className=" text-center text-4xl md:text-[6rem] font-bold mt-20 leading-none tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 to-neutral-600 animate-gradient bg-300%">
+          <h2 className=" text-center text-4xl md:text-[6rem] font-bold  leading-none tracking-wider bg-clip-text text-transparent bg-gradient-to-r from-neutral-200 to-neutral-600 animate-gradient bg-300%">
             Projects
           </h2>
         }
       >
-        <Tabs tabs={tabs} contentClassName="mt-2 p-0" />
+        <Tabs tabs={tabs} contentClassName="mt-0" />
       </ContainerScroll>
 
       {/* projects grid */}
@@ -104,7 +104,7 @@ export default function Home() {
       <Separator />
       {/* contact me section */}
 
-      <div className="h-96 relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
+      <div className="h-auto relative w-full overflow-hidden bg-slate-900 flex flex-col items-center justify-center rounded-lg">
         <div className="absolute inset-0 w-full h-full bg-slate-900 z-20 [mask-image:radial-gradient(transparent,white)] pointer-events-none" />
 
         <Boxes />
